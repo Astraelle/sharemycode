@@ -1,6 +1,6 @@
 import '../connexion/connexion.dart';
 
-class Contents extends Connexion{
+class Contents{
 
 }
 

@@ -1,6 +1,6 @@
 import '../connexion/connexion.dart';
 
-class Logs extends Connexion{
+class Logs{
 
 }
 
