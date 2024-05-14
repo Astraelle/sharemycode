@@ -1,4 +1,6 @@
-class Users{
+import '../connexion/connexion.dart';
+
+class Users extends Connexion{
 
 }
 
