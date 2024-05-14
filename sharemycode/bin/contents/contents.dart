@@ -1,0 +1,7 @@
+class Contents{
+
+}
+
+void main(){
+  
+}

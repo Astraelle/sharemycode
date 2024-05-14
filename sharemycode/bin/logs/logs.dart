@@ -1,0 +1,7 @@
+class Logs{
+
+}
+
+void main(){
+  
+}

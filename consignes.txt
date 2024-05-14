@@ -1,0 +1,15 @@
+3 classes = 3 fichiers :
+- Users
+- Logs
+- Contents
+
+class{
+    connect()
+    disconnect()
+}
+
+readme.md : 
+- documenter au max
+- postmortem
+
+installeur dart create -t server-shelf sharemycode
