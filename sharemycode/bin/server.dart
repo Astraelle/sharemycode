@@ -3,13 +3,15 @@ import 'dart:io';
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart';
 import 'package:shelf_router/shelf_router.dart';
-
 import 'connexion/connexion.dart';
+import 'user/user.dart';
 
 // Configure routes.
 final _router = Router()
   ..get('/', _rootHandler)
-  ..get('/echo/<message>', _echoHandler);
+  ..get('/echo/<message>', _echoHandler)
+  ..post('/login', _loginHandler)
+  ..post('/signup', _signUpHandler);
 
 Response _rootHandler(Request req) {
 
@@ -19,6 +21,22 @@ Response _rootHandler(Request req) {
 Response _echoHandler(Request request) {
   final message = request.params['message'];
   return Response.ok('$message\n');
+}
+
+Response _loginHandler(Request request){
+  final message = request.params;
+    var m = request.readAsString().then((value) => print(value));
+    print(m);
+    Connexion().openDataBase();
+    return Response.ok('$message');
+}
+
+Response _signUpHandler(Request request){
+  final message = request.params;
+    var m = request.readAsString().then((value) => print(value));
+    print(m);
+    Connexion().openDataBase();
+    return Response.ok('$message');
 }
 
 void main(List<String> args) async {
